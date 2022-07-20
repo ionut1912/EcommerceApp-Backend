@@ -1,0 +1,7 @@
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.csproj.AssemblyReference.cache
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.AssemblyInfoInputs.cache
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.AssemblyInfo.cs
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.csproj.CoreCompileInputs.cache
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nites\Desktop\projects\ECommerce\ECommerceApp\obj\Debug\net6.0\ECommerceApp.MvcApplicationPartsAssemblyInfo.cache
