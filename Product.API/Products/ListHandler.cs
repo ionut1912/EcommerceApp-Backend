@@ -5,7 +5,7 @@ using Product.API.Core;
 
 namespace Product.API.Products;
 
-public class ListHandler : IRequestHandler<ListCommand,Result<List<Models.Product>>>
+public class ListHandler : IRequestHandler<ListCommand, Result<List<Models.Product>>>
 {
     private readonly ProductContext _context;
 
@@ -15,7 +15,7 @@ public class ListHandler : IRequestHandler<ListCommand,Result<List<Models.Produc
     }
 
 
-    public async  Task<Result<List<Models.Product>>> Handle(ListCommand request, CancellationToken cancellationToken)
+    public async Task<Result<List<Models.Product>>> Handle(ListCommand request, CancellationToken cancellationToken)
     {
         return Result<List<Models.Product>>.Success(await _context.Products.ToListAsync());
     }

@@ -1,12 +1,11 @@
-﻿using System.Diagnostics;
-using AutoMapper;
+﻿using AutoMapper;
 using MediatR;
 using Product.API.Context;
 using Product.API.Core;
 
 namespace Product.API.Products;
 
-public class CreateCommandHandler : IRequestHandler<CreateCommand, Result<Unit>>
+public class CreateCommandHandler : IRequestHandler<CreateCommand, Result<Models.Product>>
 {
     private readonly ProductContext _context;
     private readonly IMapper _mapper;
@@ -16,15 +15,15 @@ public class CreateCommandHandler : IRequestHandler<CreateCommand, Result<Unit>>
         _context = context;
         _mapper = mapper;
     }
-
-
-    public async Task<Result<Unit>> Handle(CreateCommand request, CancellationToken cancellationToken)
+    
+    public async Task<Result<Models.Product>> Handle(CreateCommand request, CancellationToken cancellationToken)
     {
         var product = _mapper.Map<Models.Product>(request.productForCreation);
         product.Id = Guid.NewGuid();
+
         _context.Products.Add(product);
         var result = await _context.SaveChangesAsync() > 0;
-        if (!result) return Result<Unit>.Failure("Failed to create product");
-        return Result<Unit>.Success(Unit.Value);
+        if (!result) return Result<Models.Product>.Failure("Failed to create product");
+        return Result<Models.Product>.Success(product);
     }
 }

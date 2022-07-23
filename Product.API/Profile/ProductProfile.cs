@@ -1,9 +1,8 @@
-﻿
-using Product.API.Models;
+﻿using Product.API.Models;
 
 namespace Product.API.Profile;
 
-public class ProductProfile:AutoMapper.Profile
+public class ProductProfile : AutoMapper.Profile
 {
     public ProductProfile()
     {

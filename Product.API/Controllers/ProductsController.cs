@@ -1,12 +1,8 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Product.API.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using Product.API.Models;
 using Product.API.Products;
 
 namespace Product.API.Controllers;
-
 
 public class ProductsController : BaseApiController
 {
@@ -20,13 +16,13 @@ public class ProductsController : BaseApiController
     [HttpGet("{id}")]
     public async Task<ActionResult<Models.Product>> GetProduct(Guid id)
     {
-        return HandleResult(await Mediator.Send(new QueryItem{Id=id}));
+        return HandleResult(await Mediator.Send(new QueryItem { Id = id }));
     }
 
     [HttpPut("{id}")]
     public async Task<ActionResult<Models.Product>> UpdateProduct(Guid id, ProductForUpdate productForUpdate)
     {
-        return HandleResult(await Mediator.Send(new EditComand { Id=id,productForUpdate = productForUpdate }));
+        return HandleResult(await Mediator.Send(new EditComand { Id = id, productForUpdate = productForUpdate }));
     }
 
     // POST: api/DCandidate
@@ -42,6 +38,6 @@ public class ProductsController : BaseApiController
     [HttpDelete("{id}")]
     public async Task<ActionResult<Models.Product>> DeleteProduct(Guid id)
     {
-        return HandleResult(await Mediator.Send(new QueryDelete{Id = id }));
+        return HandleResult(await Mediator.Send(new QueryDelete { Id = id }));
     }
 }

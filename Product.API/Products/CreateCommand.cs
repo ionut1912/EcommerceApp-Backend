@@ -1,11 +1,10 @@
-﻿
-using MediatR;
+﻿using MediatR;
 using Product.API.Core;
 using Product.API.Models;
 
 namespace Product.API.Products;
 
-    public class CreateCommand :IRequest<Result<Unit>>
-    {
-        public ProductForCreation productForCreation { get; set; }
-    }
+public class CreateCommand : IRequest<Result<Models.Product>>
+{
+    public ProductForCreation productForCreation { get; set; }
+}

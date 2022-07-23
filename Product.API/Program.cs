@@ -1,4 +1,3 @@
-using System.Reflection;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Product.API.Context;
@@ -14,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProductContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("ProductsConnectionString"), sqlServerOptionsAction:
+    builder.Configuration.GetConnectionString("ProductsConnectionString"),
     sqlOptions => { sqlOptions.EnableRetryOnFailure(); }));
 builder.Services.AddAutoMapper(typeof(ProductProfile));
 builder.Services.AddMediatR(typeof(CreateCommand).Assembly);

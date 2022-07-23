@@ -3,7 +3,7 @@ using Product.API.Core;
 
 namespace Product.API.Products;
 
-public class QueryDelete:IRequest<Result<Unit>>
+public class QueryDelete : IRequest<Result<Unit>>
 {
-    public  Guid Id { get; set; }
+    public Guid Id { get; set; }
 }
