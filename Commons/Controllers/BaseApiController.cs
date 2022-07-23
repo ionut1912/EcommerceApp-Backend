@@ -1,17 +1,13 @@
-﻿using MediatR;
+﻿using Commons.Core;
 using Microsoft.AspNetCore.Mvc;
-using Product.API.Core;
 
-namespace Product.API.Controllers;
+
+namespace Commons.Controllers;
 
 [Route("[controller]")]
 [ApiController]
 public class BaseApiController : ControllerBase
 {
-    private IMediator _mediator;
-
-    protected IMediator Mediator => _mediator ??= HttpContext.RequestServices
-        .GetService<IMediator>();
 
     protected ActionResult HandleResult<T>(Result<T> result)
     {

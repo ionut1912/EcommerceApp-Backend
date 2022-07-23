@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
+using Commons.Core;
 using MediatR;
 using Product.API.Context;
-using Product.API.Core;
+
 
 namespace Product.API.Products;
 

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Commons.Controllers;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Product.API.Models;
 using Product.API.Products;
 
@@ -6,6 +8,9 @@ namespace Product.API.Controllers;
 
 public class ProductsController : BaseApiController
 {
+    private IMediator _mediator;
+    protected IMediator Mediator => _mediator ??= HttpContext.RequestServices
+        .GetService<IMediator>();
     // GET: api/Products
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Models.Product>>> GetProducts()

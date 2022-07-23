@@ -1,4 +1,4 @@
-﻿namespace Product.API.Core;
+﻿namespace Commons.Core;
 
 public class Result<T>
 {

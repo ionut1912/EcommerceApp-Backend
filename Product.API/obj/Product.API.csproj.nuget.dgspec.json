@@ -4,6 +4,64 @@
     "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Product.API/Product.API.csproj": {}
   },
   "projects": {
+    "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/Commons.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/Commons.csproj",
+        "projectName": "Commons",
+        "projectPath": "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/Commons.csproj",
+        "packagesPath": "/home/ionut/.nuget/packages/",
+        "outputPath": "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ionut/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Product.API/Product.API.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +83,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/Commons.csproj": {
+                "projectPath": "/home/ionut/Desktop/Projects/EComerceApp/EcommerceApp-Backend/Commons/Commons.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

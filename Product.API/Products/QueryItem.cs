@@ -1,5 +1,6 @@
-﻿using MediatR;
-using Product.API.Core;
+﻿using Commons.Core;
+using MediatR;
+
 
 namespace Product.API.Products;
 

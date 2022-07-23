@@ -1,7 +1,7 @@
-﻿using MediatR;
+﻿using Commons.Core;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Product.API.Context;
-using Product.API.Core;
 
 namespace Product.API.Products;
 
